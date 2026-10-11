@@ -25,7 +25,7 @@ class FlowerInput(BaseModel):
 
 @app.get("/")
 def home():
-    return {"message": "Iris Prediction API is running"}
+    return {"message": "Iris Prediction API is running - auto-deploy test"}
 
 
 @app.get("/health")
