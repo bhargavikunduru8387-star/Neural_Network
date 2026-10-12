@@ -81,10 +81,11 @@ def predict(flower: FlowerInput):
     scaled_features = scaler.transform(features)
     probabilities = model.predict(scaled_features, verbose=0)[0]
 
-    predicted_index = int(np.argmax(probabilities))
     if not np.all(np.isfinite(probabilities)):
         logger.error("Model returned invalid probabilities")
         raise ValueError("Model returned invalid probabilities")
+
+    predicted_index = int(np.argmax(probabilities))
 
     if not np.isclose(np.sum(probabilities), 1.0, atol=0.01):
         logger.warning("Model probabilities do not sum to approximately 1")
