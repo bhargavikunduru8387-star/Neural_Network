@@ -6,3 +6,5 @@ tensorflow
 fastapi
 uvicorn
 joblib
+streamlit
+requests
