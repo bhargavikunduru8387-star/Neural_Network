@@ -9,3 +9,4 @@ uvicorn
 pytest
 joblib
 httpx2
+prometheus-client==0.26.0
