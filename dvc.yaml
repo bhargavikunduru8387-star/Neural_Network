@@ -1,0 +1,10 @@
+﻿stages:
+  train:
+    cmd: python neuralnetwork.py
+    deps:
+      - neuralnetwork.py
+      - data/iris_dataset.csv
+    outs:
+      - models/iris_neural_network.keras
+      - models/scaler.pkl
+      - models/label_encoder.pkl

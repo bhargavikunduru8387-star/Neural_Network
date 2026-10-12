@@ -1,0 +1,26 @@
+schema: '2.0'
+stages:
+  train:
+    cmd: python neuralnetwork.py
+    deps:
+    - path: data/iris_dataset.csv
+      hash: md5
+      md5: 72de67d2f0a43b9f53c08f399d9e96ef
+      size: 3878
+    - path: neuralnetwork.py
+      hash: md5
+      md5: 816bc977a749009a5a35b4face2796f1
+      size: 5022
+    outs:
+    - path: models/iris_neural_network.keras
+      hash: md5
+      md5: e7bad4c58bfec23d2d9781852ea8f092
+      size: 30498
+    - path: models/label_encoder.pkl
+      hash: md5
+      md5: 57193dd3cdadebf20e419cc7cf7cc82b
+      size: 507
+    - path: models/scaler.pkl
+      hash: md5
+      md5: df9cd0979b52365cb81194aa0f623cbc
+      size: 711
